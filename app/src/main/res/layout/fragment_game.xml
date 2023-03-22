@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="gameViewModel"
+            type="com.example.popularityquiz.screens.game.GameViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+    
+            <ImageView
+                android:id="@+id/topImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:imageResource="@{gameViewModel.animeTopImage}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/top_anime_image" />
+    
+    
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/translucent_box"
+                android:alpha="0.9"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+    
+            <TextView
+                android:id="@+id/titleTopText"
+                android:layout_marginBottom="16dp"
+                android:text="@{ @string/text_format(gameViewModel.animeTopName) }"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/titleStyle" />
+    
+            <TextView
+                android:id="@+id/topMembers"
+                android:layout_marginTop="16dp"
+                android:visibility="invisible"
+                android:text="@{ @string/members_format(gameViewModel.animeTopMembers) }"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/scoreStyle" />
+    
+            <Button
+                android:id="@+id/topBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/play_btn_color"
+                android:alpha="0.8"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/text_color"
+                android:text="@string/top"
+                app:layout_constraintTop_toBottomOf="@id/topMembers"
+                app:layout_constraintBottom_toTopOf="@id/titleTopText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+    
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+    
+            <ImageView
+                android:id="@+id/bottomImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:imageResource="@{gameViewModel.animeBottomImage}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/bottom_anime_image" />
+    
+    
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/translucent_box"
+                android:alpha="0.9"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+    
+    
+            <TextView
+                android:id="@+id/titleBottomText"
+                android:layout_marginTop="16dp"
+                android:text="@{ @string/text_format(gameViewModel.animeBottomName) }"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/titleStyle"/>
+    
+            <TextView
+                android:id="@+id/bottomMembers"
+                android:layout_marginBottom="16dp"
+                android:visibility="invisible"
+                android:text="@{ @string/members_format(gameViewModel.animeBottomMembers) }"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/scoreStyle"/>
+    
+            <TextView
+                android:id="@+id/tvScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@{ @string/score_format(gameViewModel.score) }"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/scoreStyle"/>
+    
+            <Button
+                android:id="@+id/bottomBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/play_btn_color"
+                android:alpha="0.8"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/text_color"
+                android:text="@string/bottom"
+                app:layout_constraintTop_toBottomOf="@id/titleBottomText"
+                app:layout_constraintBottom_toTopOf="@id/bottomMembers"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+    
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    </LinearLayout>
+</layout>

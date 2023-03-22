@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">PopularityQuiz</string>
+    <string name="play">Play</string>
+    <string name="youScored">You scored…</string>
+    <string name="chooseMorePopular">Choose the more popular one!!!</string>
+    <string name="bottom">Bottom</string>
+    <string name="top">TOP</string>
+    <string name="bottom_anime_image">bottom Anime image</string>
+    <string name="top_anime_image">top Anime image</string>
+    <string name="text_format">\"%s\"</string>
+    <string name="members_format">%d</string>
+    <string name="score_format">%d</string>
+    <string name="play_again">Play Again</string>
+    <string name="quizTitle">PopularityQuiz</string>
+    <string name="rules">
+<big>PopularityQuiz Rules</big> \n\n
+
+Game screen is divided into two equal pieces, a top one, and a bottom one.
+Each one of them contains cover image and title of an anime.
+Your job is to choose which anime is more popular. Based on MyAnimeList most popular anime ranking.
+Each good guess is counted as a point, after you face Defeat or embrace Victory you will see how many points you managed to get. \n\n
+
+<big>Good Luck!!</big>
+    </string>
+    <string name="get_started">Get started</string>
+    <string name="rules_text">rules</string>
+</resources>
